@@ -14,12 +14,13 @@ React.Component 는 추상 클래스로 직접 참조가 불가능하다. 그래
 
 *react 구성 요소는 일반 javascript class 로 정의 한다
 
-        class Greeting extends React.Component {
-          render() {
-            return <h1>Hello, {this.props.name}</h1>;
-          }
-        }
-           
+```JSX
+class Greeting extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+```    
 ### 생명 주기 ( Life Cycle )
 각 구성 요소에는 프로세스의 특정 시간에 코드를 실행하기 위해 재정의 할 수있는 여러 "라이프 사이클 메소드"가 있다. 접두사가 붙은 메소드 will는 무언가가 일어나기 바로 전에 호출되며 접두사가 붙은 메소드 did는 무언가가 발생한 직후에 호출된다.
 
