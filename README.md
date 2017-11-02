@@ -70,9 +70,13 @@ js + xml 를 합쳐서 탄생한 자바스크립트의 확장 문법으로 개�
         ReactDOM.render(
           React.createElement(Hello, {toWhat: 'World'}, null),
           document.getElementById('root')
-        );
+        );
+        
+createElement 상수로 선언 하여 이런 방식으로도 사용이 가능하다
 
+        const e = React.createElement;
 
-
-
-
+          ReactDOM.render(
+            e('div', null, 'Hello World'),
+            document.getElementById('root')
+          );
