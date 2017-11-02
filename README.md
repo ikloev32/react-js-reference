@@ -82,8 +82,18 @@ createElement 상수로 선언 하여 이런 방식으로도 사용이 가능하
           );
 
 ## 2-2. createFactory()
-JSX를 사용 하거나 React.createElement()하거나 대신 직접 사용 하는 것이 좋다 고 한다
+JSX를 사용 하거나 React.createElement()하거나 대신 직접 사용 하는 것이 좋다고 한다
 
         React.createFactory(type)
+
+
+# 3. 요소 변환 하기
+
+## 3.2 isValidElement()
+  객체가 React 요소인지 확인한다. true 또는 false를 반환 한다
+  
+        React.isValidElement(object)
         
+ 
+
  
