@@ -64,33 +64,33 @@ ReactDOM.render(
 ## 2-1. createElement()
 
 ```JSX
-        class Hello extends React.Component {
-          render() {
-           return React.createElement('div', null, `Hello ${this.props.toWhat}`);
-          }
-        }
+class Hello extends React.Component {
+  render() {
+   return React.createElement('div', null, `Hello ${this.props.toWhat}`);
+  }
+}
 
-        ReactDOM.render(
-          React.createElement(Hello, {toWhat: 'World'}, null),
-          document.getElementById('root')
-        );
+ReactDOM.render(
+  React.createElement(Hello, {toWhat: 'World'}, null),
+  document.getElementById('root')
+);
 ```
 createElement 상수로 선언 하여 이런 방식으로도 사용이 가능하다
 
 ```JSX
-        const e = React.createElement;
+const e = React.createElement;
 
-          ReactDOM.render(
-            e('div', null, 'Hello World'),
-            document.getElementById('root')
-          );
+ReactDOM.render(
+  e('div', null, 'Hello World'),
+  document.getElementById('root')
+);
 ```
 
 ## 2-2. createFactory()
 JSX를 사용 하거나 React.createElement()하거나 대신 직접 사용 하는 것이 좋다고 한다
 
 ```JSX
-        React.createFactory(type)
+React.createFactory(type)
 ```
 
 # 3. 요소 변환 하기
@@ -99,7 +99,7 @@ JSX를 사용 하거나 React.createElement()하거나 대신 직접 사용 하�
   객체가 React 요소인지 확인한다. true 또는 false를 반환 한다
 
 ```JSX  
-        React.isValidElement(object)
+React.isValidElement(object)
 ```    
  
 
