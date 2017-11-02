@@ -46,22 +46,24 @@ js + xml 를 합쳐서 탄생한 자바스크립트의 확장 문법으로 개�
 
 ## JSX를 사용 할 경우
 
-        class Hello extends React.Component {
-          render() {
-            return <div>Hello {this.props.toWhat}</div>;
-          }
-        }
+```JSX
+class Hello extends React.Component {
+  render() {
+    return <div>Hello {this.props.toWhat}</div>;
+  }
+}
 
-        ReactDOM.render(
-          <Hello toWhat="World" />,
-          document.getElementById('root')
-        );
-        
+ReactDOM.render(
+  <Hello toWhat="World" />,
+  document.getElementById('root')
+);
+```    
 ## JSX를 사용 하지 않을 경우
 사용 하지 않을경우 아래 와 같은 함수들을 사용한다
 
 ## 2-1. createElement()
 
+```JSX
         class Hello extends React.Component {
           render() {
            return React.createElement('div', null, `Hello ${this.props.toWhat}`);
@@ -72,29 +74,33 @@ js + xml 를 합쳐서 탄생한 자바스크립트의 확장 문법으로 개�
           React.createElement(Hello, {toWhat: 'World'}, null),
           document.getElementById('root')
         );
-        
+```
 createElement 상수로 선언 하여 이런 방식으로도 사용이 가능하다
 
+```JSX
         const e = React.createElement;
 
           ReactDOM.render(
             e('div', null, 'Hello World'),
             document.getElementById('root')
           );
+```
 
 ## 2-2. createFactory()
 JSX를 사용 하거나 React.createElement()하거나 대신 직접 사용 하는 것이 좋다고 한다
 
+```JSX
         React.createFactory(type)
-
+```
 
 # 3. 요소 변환 하기
 
 ## 3.2 isValidElement()
   객체가 React 요소인지 확인한다. true 또는 false를 반환 한다
-  
+
+```JSX  
         React.isValidElement(object)
-        
+```    
  
 
  
