@@ -55,6 +55,7 @@ js + xml 를 합쳐서 탄생한 자바스크립트의 확장 문법으로 개�
           <Hello toWhat="World" />,
           document.getElementById('root')
         );
+        
 ## JSX를 사용 하지 않을 경우
 사용 하지 않을경우 아래 와 같은 함수들을 사용한다
 
