@@ -39,8 +39,26 @@ JSX 를 사용 하여 UI의 모양을 설명하는 것이 react 에서 추천 �
 js + xml 를 합쳐서 탄생한 자바스크립트의 확장 문법으로 개발자가 자바스크립트 내부에 마크업 코드를 작성해 줄 수 있게 해줍니다.
 단순히 XML만 아니라 변수나 프로퍼티의 바인딩 기능도 제공한다
 
-## JSX 를 사용 
+## JSX 를 사용 해야 하나 
+
+eact.createElement(component, props, ...children). 따라서 JSX로 수행 할 수있는 작업은 일반 자바 스크립트로도 수행 할 수 있습니다.
+
+### JSX를 사용 했을때
+
+               class Hello extends React.Component {
+                    render() {
+                        return <div>Hello {this.props.toWhat}</div>;
+                    }
+                }
+
+                ReactDOM.render(
+                    <Hello toWhat="World" />,
+                    document.getElementById('root')
+                );
+
 ## createElement()
+
+
 
 
 
